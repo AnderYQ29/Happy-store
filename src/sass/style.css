@@ -1,0 +1,134 @@
+:root {
+  --primary-color: #E53935;
+  --second-color: #fccbcb;
+  --black-color: #010508;
+  --white-color: #f1f5f8;
+  --size: 0.21875rem;
+  --max-width: 1280px;
+  --transition-duration: 0.25s;
+  --primary-text: var(--black-color);
+  --border-radius: calc(var(--size) *4);
+}
+@media (width >= 768px) {
+  :root {
+    --size: 0.25rem;
+  }
+}
+
+.heroHome {
+  display: flex;
+  align-items: center;
+  padding-block: calc(var(--size) * 25);
+  position: relative;
+  overflow: hidden;
+}
+.heroHome::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 25vw;
+  height: 25vw;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--primary-color);
+}
+.heroHome::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  bottom: 0;
+  width: 50vw;
+  height: 50vw;
+  border-radius: 50%;
+  transform: translate(50%, 50%);
+  background-color: var(--primary-color);
+}
+
+.contHome {
+  max-width: var(--max-width);
+  padding-inline: calc(var(--size) * 2);
+  margin-inline: auto;
+}
+
+.g-layout {
+  display: grid;
+}
+
+.g-layout--center {
+  place-items: center;
+  place-content: center;
+}
+
+@media (width >= 768px) {
+  .md\:g-layout--1fr-1fr {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.d-flexHome {
+  display: flex;
+}
+
+.f-direction-column-Home {
+  flex-direction: column;
+}
+
+.a-items-start-Home {
+  align-items: flex-start;
+}
+
+.g-2-Home {
+  gap: 0.5rem;
+}
+
+.hero-title-Home {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 900;
+}
+
+.c-primary-Home {
+  color: var(--primary-color);
+}
+
+.hero-paragraph-home {
+  margin: 0;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
+.link-Home {
+  padding: 0.5em 1em;
+  border-radius: 1rem;
+  color: var(--black-color);
+  text-decoration: none;
+  transition: background-color var(--transition-duration), color var(--transition-duration);
+}
+.link-Home--active, .link-Home:hover {
+  background-color: var(--second-color);
+  color: var(--white-color);
+}
+
+.interactive-Home {
+  font-size: calc(var(--size) * 3.5);
+  font-weight: 600;
+}
+
+.interactive-Home--lg {
+  font-size: calc(var(--size) * 4);
+}
+
+.body-Home {
+  margin: 0;
+  overflow: auto;
+}
+
+.link-Home {
+  color: var(--black-color);
+  text-decoration: none;
+  transition: color 0.25s;
+}
+.link-Home:hover {
+  color: var(--primary-color);
+}/*# sourceMappingURL=style.css.map */
