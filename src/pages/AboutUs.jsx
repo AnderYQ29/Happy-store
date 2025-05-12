@@ -1,6 +1,6 @@
 import BienvenidoImg from '/src/assets/Bienvenidos.jpeg';
 import Producto1 from '/src/assets/Producto1.png';
-import Producto2 from '/src/assets/Producto2.png';
+import Producto2 from '/src/assets/producto2.png';
 import Mision from '/src/assets/mision.png'
 import Vision from '/src/assets/vision.png'
 
